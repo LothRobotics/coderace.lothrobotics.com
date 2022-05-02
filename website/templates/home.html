@@ -20,11 +20,11 @@
             </ul>
         </nav>
         <div class="profile">
-            <a href="#" class="user-btn"><i class="fa-solid fa-circle-user"></i></a>
+            <a href="#" class="user-btn"><i class="fa-solid fa-circle-user" onclick="menuToggle();"></i></a>
             <div class="profile-menu">
-                <h3>Furkan Esen</h3>
-                <br>
-                <div class="sub-text">Software Developer</div>
+                <h3>Furkan Esen(violence)</h3>
+                <div class="sub-text">Expert Member</div>
+                <div class="sub-text">250.00 EXP</div>
                 <ul>
                     <li><i class="fa-solid fa-circle-user pricon"></i><a href="#">My Profile</a></li>
                     <li><i class="fa-solid fa-pen-to-square pricon"></i><a href="#">Edit Profile</a></li>
@@ -36,6 +36,11 @@
             </div>
         </div>
     </header>
-
+    <script>
+        function menuToggle() {
+            const toggleMenu = document.querySelector('.profile-menu');
+            toggleMenu.classList.toggle('active');
+        }
+    </script>
 </body>
 </html>
