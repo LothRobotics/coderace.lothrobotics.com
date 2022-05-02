@@ -27,8 +27,7 @@ header {
 }
 
 h1 {
-    cursor: pointer;
-
+  
 }
 
 .nav-area {
@@ -42,7 +41,7 @@ h1 {
 }
 
 .nav-area li a {
-    transition: opacity .3s ease-in-out;  
+    transition: opacity .3s ease-in-out;
 }
 
 .nav-area li a:hover {
