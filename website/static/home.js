@@ -36,6 +36,11 @@ signInBtn.addEventListener('click', () => {
     popUpBlur(loginForm);
 });
 
+registerBtn.addEventListener('click', () => {
+    profileMenuToggle();
+    popUpBlur(registerForm);
+});
+
 changeFormBtns.forEach(changeFormBtn => {
     changeFormBtn.addEventListener('click', () => {
         if (registerForm.style.display == 'none' || registerForm.style.display == '') {
