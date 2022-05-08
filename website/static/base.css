@@ -29,56 +29,6 @@ a.website-title {
     color: white;
 }
 
-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 30px;
-    background-color: var(--color-black);
-}
-
-h1 span {
-    color: var(--color-primary);
-}
-
-header ul.nav-area {
-    list-style: none;
-    display: flex;
-}
-
-header ul.nav-area li {
-    padding: 20px 30px 20px;
-    position: relative;
-}
-
-header ul.nav-area li a {
-    color: white;
-    text-decoration: none;
-    font-size: 1.2em;
-
-    transition: all 0.3s;
-}
-
-header ul.nav-area li a:hover {
-    color: var(--color-primary);
-}
-
-header ul.nav-area li ul {
-    display: none;
-}
-
-header ul.nav-area li:hover ul {
-    display: block;
-    position: absolute;
-    left: 0;
-    top: 100%;
-    background-color: var(--color-black);
-    list-style: none;
-}
-
-header ul.nav-area li ul li {
-    text-align: center;
-}
 
 
 

@@ -39,7 +39,7 @@ def register_request(request):
                 return render(request, 'home.html', {'error': 'There is such an account with your email address.'})
             user = User.objects.create_user(username=username, email=email, first_name='Unknown', last_name='User', password=password)
             user.save()
-            messages.success(request, 'You have created an account succesfully!')
+            messages.success(request, 'You have created an account succesfully!', extra_tags='')
             return login_request(request)
         else:
             return render(request, 'home.html', {'error': 'Passwords do not match!'})
@@ -47,4 +47,4 @@ def register_request(request):
 def logout_request(request):
     logout(request)
     messages.success(request, 'You have logged out succesfully!')
-    return render(request, 'home.html')
+    return redirect('home')
