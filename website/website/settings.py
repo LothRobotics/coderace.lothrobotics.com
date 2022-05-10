@@ -45,10 +45,11 @@ INSTALLED_APPS = [
     'allauth.socialaccount.providers.microsoft',
     'allauth.socialaccount.providers.google',
     'allauth.socialaccount.providers.github',
-    'channels',
     'home',
     'lobbies',
+    'practises',
 ]
+
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -59,6 +60,8 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
+
+
 
 ROOT_URLCONF = 'website.urls'
 
@@ -80,8 +83,6 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'website.wsgi.application'
-
-ASGI_APPLICATION = 'website.asgi.application'
 
 
 # Database

@@ -17,7 +17,7 @@
                 <li class="lobby card bg-light text-dark mb-3 w-25 m-4">
                     <div class="card-header">Classic Lobby</div>
                     <div class="card-body">
-                        <h3 class="lobby-name card-title">{{lobby.lobby_name}} (#{{lobby.id}})</h3>
+                        <h3 class="lobby-name card-title">{{lobby.lobby_name}} ({{lobby.users|length}}/6)</h3>
                         <p class="lobby-desc card-subtitle mb-2 text-muted">{{lobby.lobby_desc}}</p>
                         <p class="card-text">Please hit the button below to go to the lobby!</p>
                         <a href="#" class="btn btn-primary">Join the lobby!</a>
@@ -26,4 +26,33 @@
             {% endfor %}
         </ul>
     </div>
+{% endblock %}
+
+{% block externaljs %}
+{{ room_name|json_script:"room-name" }}
+<script>
+
+const roomName = JSON.parse(document.getElementById('room-name').textContent);
+
+const chatSocket = new WebSocket(
+    'ws://'
+    + window.location.host
+    + '/ws/lobby/'
+    + roomName
+    + '/'
+);
+
+chatSocket.onmessage = function(e) {
+    const data = JSON.parse(e.data);
+    
+};
+
+chatSocket.onclose = function(e) {
+    console.error('Chat socket closed unexpectedly');
+};
+
+
+
+
+</script>
 {% endblock %}
